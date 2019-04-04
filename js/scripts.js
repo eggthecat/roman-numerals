@@ -1,5 +1,7 @@
 
-var romanNumeralOutput = [];
+// business logic
+var romanNumeralOutput = [''];
+romanNumeralOutput.join(' ');
 
 function toRomanNumeral(num){
   for (var i = num; i != 0; i += 0) {
@@ -58,12 +60,8 @@ function toRomanNumeral(num){
     var i = (i - 1);
       var num = i;
   }
-
 }
 }
-var result = romanNumeralOutput.join('');
-
-
 
 // Front-End login //
 $(document).ready(function() {
@@ -71,8 +69,7 @@ $(document).ready(function() {
     event.preventDefault();
     var num = parseInt($("input#number").val());
   toRomanNumeral(num);
-  $(".conversion").text(result);
-
+  $(".conversion").text(romanNumeralOutput);
   });
 });
 
